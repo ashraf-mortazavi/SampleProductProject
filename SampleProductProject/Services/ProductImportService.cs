@@ -68,7 +68,7 @@ namespace SampleProductProject.Services
                 else
                 {
                     var existingUserProductsByTitle = await _context.UserProducts
-                     .Where(p => p.UserId == userId && userProductsToDic.Values.Select(d => d.Title).ToList().Contains(p.Code))
+                     .Where(p => p.UserId == userId && userProductsToDic.Values.Select(d => d.Title).ToList().Contains(p.Title))
                      .ToListAsync();
 
                     if (existingUserProductsByTitle.Any() || existingUserProductsByTitle is not null)
@@ -87,18 +87,13 @@ namespace SampleProductProject.Services
                     .ToList();
 
                 _context.UserProducts.AddRange(newProducts);
-
                 await _context.SaveChangesAsync();
             }
-
-            await _context.SaveChangesAsync();
             
-
             var hasErrors = result.Errors.Count > 0;
             result.Success = !hasErrors;
             result.Status = hasErrors ? "Failed" : "Success";
         
-
             return result;
         }
     }
