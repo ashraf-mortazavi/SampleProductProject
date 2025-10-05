@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Models\.vs\Models\v17\DocumentLayout.json" />
+    <Content Include="Models\.vs\VSWorkspaceState.json" />
+    <Content Include="Scripts\.vs\Scripts\v17\DocumentLayout.json" />
+    <Content Include="Scripts\.vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Models\.vs\Models\FileContentIndex\9802f7f7-f92a-4b36-a2d5-953b441bfa16.vsidx" />
+    <None Include="Models\.vs\slnx.sqlite" />
+    <None Include="Scripts\.vs\Scripts\FileContentIndex\fc4fb19e-8630-418c-98a0-df77bcd54184.vsidx" />
+    <None Include="Scripts\.vs\slnx.sqlite" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.20" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.20" />
+    <PackageReference Include="CsvHelper" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2" />
+    <PackageReference Include="MediatR" Version="7.0.0" />
+    <PackageReference Include="FluentValidation" Version="7.0.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="8.2.2" />
+
+  </ItemGroup>
+
+</Project>
